@@ -9,7 +9,6 @@ class ListCoordinateComponent extends Component {
       coordinates: [],
     };
     this.addCoordinate = this.addCoordinate.bind(this);
-    this.editCoordinate = this.editCoordinate.bind(this);
     this.deleteCoordinate = this.deleteCoordinate.bind(this);
   }
 
@@ -24,9 +23,6 @@ class ListCoordinateComponent extends Component {
   }
   viewCoordinate(id) {
     this.props.history.push(`/view-coordinate/${id}`);
-  }
-  editCoordinate(id) {
-    this.props.history.push(`/add-coordinate/${id}`);
   }
 
   componentDidMount() {
@@ -65,12 +61,6 @@ class ListCoordinateComponent extends Component {
                   <td>{coordinate.longitude}</td>
                   <td>{coordinate.latitude}</td>
                   <td>
-                    <button
-                      onClick={() => this.editCoordinate(coordinate.id)}
-                      className="btn btn-info"
-                    >
-                      Update{" "}
-                    </button>
                     <button
                       style={{ marginLeft: "10px" }}
                       onClick={() => this.deleteCoordinate(coordinate.id)}

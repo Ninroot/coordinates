@@ -39,16 +39,6 @@ public class CoordinateController {
         return coordinate.orElse(null);
     }
 
-    /**
-     * Update - Update one coordinate
-     * @param id The id of the coordinate to be updated
-     * @param coordinate An Coordinate object full filled
-     * @return An Coordinate object full filled
-     */
-    @PutMapping("/coordinates/{id}")
-    public Coordinate updateCoordinate(@PathVariable("id") final Long id, @RequestBody Coordinate coordinate) {
-        return coordinateService.updateCoordinate(id, coordinate);
-    }
 
     /**
      * Read - Get all coordinates

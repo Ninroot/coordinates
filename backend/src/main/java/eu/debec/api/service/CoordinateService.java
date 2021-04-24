@@ -33,16 +33,6 @@ public class CoordinateService {
         return savedCoordinate;
     }
 
-    public Coordinate updateCoordinate(final Long id, Coordinate coordinate) {
-        Optional<Coordinate> coordinateToBeUpdated = coordinateRepository.findById(id);
-        if(coordinateToBeUpdated.isPresent()) {
-            coordinateToBeUpdated.get().setLatitude(coordinate.getLatitude());
-            coordinateToBeUpdated.get().setLongitude(coordinate.getLongitude());
-            saveCoordinate(coordinateToBeUpdated.get());
-            return coordinateToBeUpdated.get();
-        }
-        return null;
-    }
 
     /**
      * Approximate distance between two points using the Haversine formula.
