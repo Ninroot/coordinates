@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS coordinates;
+ 
+CREATE TABLE coordinates (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  longitude DOUBLE NOT NULL,
+  latitude DOUBLE NOT NULL
+);
